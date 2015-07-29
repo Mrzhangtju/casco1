@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\casco0614-final" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="WebService1.asmx" publishTime="10/16/2014 15:56:28" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="03/23/2015 14:46:52" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="03/23/2015 14:46:52" />
+    <file relUrl="Scripts/flexpaper_flash.js" publishTime="03/23/2015 14:46:52" />
+    <file relUrl="Web.config" publishTime="03/16/2015 13:55:08" />
+    <file relUrl="FlexPaper/FlexPaperViewer.swf" publishTime="03/23/2015 14:46:36" />
+    <file relUrl="bin/webinputdoc.pdb" publishTime="06/14/2015 13:44:30" />
+    <file relUrl="FlexPaper/playerProductInstall.swf" publishTime="03/23/2015 14:46:36" />
+    <file relUrl="FlexPaper/pdf2swf.exe" publishTime="03/23/2015 14:46:36" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="03/23/2015 14:46:52" />
+    <file relUrl="bin/webinputdoc.dll" publishTime="06/14/2015 13:44:30" />
+  </publishProfile>
+</publishData>

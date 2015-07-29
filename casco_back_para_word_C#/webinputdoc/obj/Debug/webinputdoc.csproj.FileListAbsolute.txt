@@ -1,0 +1,79 @@
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc\webinputdoc\bin\webinputdoc.dll
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc\webinputdoc\bin\webinputdoc.pdb
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc\webinputdoc\obj\Debug\webinputdoc.dll
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc\webinputdoc\obj\Debug\webinputdoc.pdb
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\bin\webinputdoc.dll
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\bin\webinputdoc.pdb
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\obj\Debug\webinputdoc.dll
+F:\360data\重要数据\我的文档\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\obj\Debug\webinputdoc.pdb
+C:\Users\xhz\Documents\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\bin\webinputdoc.dll
+C:\Users\xhz\Documents\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\bin\webinputdoc.pdb
+C:\Users\xhz\Documents\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\xhz\Documents\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\obj\Debug\webinputdoc.dll
+C:\Users\xhz\Documents\Visual Studio 2010\Projects\webinputdoc1\webinputdoc\obj\Debug\webinputdoc.pdb
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc1\webinputdoc\bin\webinputdoc.dll
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc1\webinputdoc\bin\webinputdoc.pdb
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc1\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc1\webinputdoc\obj\Debug\webinputdoc.dll
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc1\webinputdoc\obj\Debug\webinputdoc.pdb
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc\webinputdoc\bin\webinputdoc.dll
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc\webinputdoc\bin\webinputdoc.pdb
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc\webinputdoc\obj\Debug\webinputdoc.dll
+E:\研究生生涯\期末相关文件\casco文件\最后可用inputword\webinputdoc\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\研究生生涯\casco文件\最后可用inputword\webinputdoc\webinputdoc\bin\webinputdoc.dll
+D:\研究生生涯\casco文件\最后可用inputword\webinputdoc\webinputdoc\bin\webinputdoc.pdb
+D:\研究生生涯\casco文件\最后可用inputword\webinputdoc\webinputdoc\obj\Debug\webinputdoc.dll
+D:\研究生生涯\casco文件\最后可用inputword\webinputdoc\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\webinputdoc\webinputdoc\bin\webinputdoc.dll
+D:\webinputdoc\webinputdoc\bin\webinputdoc.pdb
+D:\webinputdoc\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+D:\webinputdoc\webinputdoc\obj\Debug\webinputdoc.dll
+D:\webinputdoc\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco\casco0319\webinputdoc\bin\webinputdoc.dll
+D:\casco\casco0319\webinputdoc\bin\webinputdoc.pdb
+D:\casco\casco0319\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco\casco0319\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco\casco0319\webinputdoc\obj\Debug\webinputdoc.csprojResolveAssemblyReference.cache
+D:\casco0319\webinputdoc\bin\webinputdoc.dll
+D:\casco0319\webinputdoc\bin\webinputdoc.pdb
+D:\casco0319\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco0319\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco0319\webinputdoc\obj\Debug\webinputdoc.csprojResolveAssemblyReference.cache
+D:\casco0324-night\webinputdoc\bin\webinputdoc.dll
+D:\casco0324-night\webinputdoc\bin\webinputdoc.pdb
+D:\casco0324-night\webinputdoc\obj\Debug\webinputdoc.csprojResolveAssemblyReference.cache
+D:\casco0324-night\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco0324-night\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\新建文件夹\casco0324-night2\webinputdoc\bin\webinputdoc.dll
+D:\新建文件夹\casco0324-night2\webinputdoc\bin\webinputdoc.pdb
+D:\新建文件夹\casco0324-night2\webinputdoc\obj\Debug\webinputdoc.csprojResolveAssemblyReference.cache
+D:\新建文件夹\casco0324-night2\webinputdoc\obj\Debug\webinputdoc.dll
+D:\新建文件夹\casco0324-night2\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco0324-night2\webinputdoc\bin\webinputdoc.dll
+D:\casco0324-night2\webinputdoc\bin\webinputdoc.pdb
+D:\casco0324-night2\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+D:\casco0324-night2\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco0324-night2\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco-0326\casco0324-night2\webinputdoc\bin\webinputdoc.dll
+D:\casco-0326\casco0324-night2\webinputdoc\bin\webinputdoc.pdb
+D:\casco-0326\casco0324-night2\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco-0326\casco0324-night2\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco-0326\casco0324-night2\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+D:\casco-0326\casco0324-night2 - 副本\webinputdoc\bin\webinputdoc.dll
+D:\casco-0326\casco0324-night2 - 副本\webinputdoc\bin\webinputdoc.pdb
+D:\casco-0326\casco0324-night2 - 副本\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+D:\casco-0326\casco0324-night2 - 副本\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco-0326\casco0324-night2 - 副本\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco\casco-0327final\casco0426\webinputdoc\bin\webinputdoc.dll
+D:\casco\casco-0327final\casco0426\webinputdoc\bin\webinputdoc.pdb
+D:\casco\casco-0327final\casco0426\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco\casco-0327final\casco0426\webinputdoc\obj\Debug\webinputdoc.pdb
+D:\casco\casco-0327final\casco0426\webinputdoc\obj\Debug\webinputdoc.csprojResolveAssemblyReference.cache
+D:\casco相关文件\casco-0524final\casco0426\webinputdoc\bin\webinputdoc.dll
+D:\casco相关文件\casco-0524final\casco0426\webinputdoc\bin\webinputdoc.pdb
+D:\casco相关文件\casco-0524final\casco0426\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
+D:\casco相关文件\casco-0524final\casco0426\webinputdoc\obj\Debug\webinputdoc.dll
+D:\casco相关文件\casco-0524final\casco0426\webinputdoc\obj\Debug\webinputdoc.pdb
