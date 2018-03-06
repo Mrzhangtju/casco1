@@ -40,6 +40,7 @@ namespace webinputdoc
         public class hahabaseobject
         {
             public string title;
+            public string tag;
             public string description;
             public ArrayList Source = new ArrayList();
             public string othercontext;
@@ -81,7 +82,7 @@ namespace webinputdoc
         public class finaljson
         {
             public ArrayList finalstrings = new ArrayList();
- 
+
         }
         public class JsonTools
         {
@@ -161,7 +162,7 @@ namespace webinputdoc
                     docdelet_tables.Tables[i].Delete();
                 }
             }
-            catch { } 
+            catch { }
             docdelet_tables.Close(ref unknow, ref unknow, ref unknow);
 
             appdelet_tables.Quit(ref unknow, ref unknow, ref unknow);
@@ -172,7 +173,7 @@ namespace webinputdoc
             string temp = null;
             string tempf = null;
             int start = 1;
-            int end = pcount/8;
+            int end = pcount / 8;
             for (int i = start; i <= end; i += 1)
             {
                 temp = doc.Paragraphs[i].Range.Text.Trim();//变量i为第i段
@@ -182,14 +183,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     int flag = 1;
                     for (int j = i + 1; j <= end; j++)
@@ -205,62 +207,62 @@ namespace webinputdoc
                     //textBox1.Text = i.ToString();
                     newobject.description = doc.Paragraphs[i + 1].Range.Text;
                     int arraycontentcount = 1;
-                        for (int k = i + 1; k <=pcount; k++)
+                    for (int k = i + 1; k <= pcount; k++)
+                    {
+                        temp = doc.Paragraphs[k].Range.Text;
+
+                        int startflag = 0;
+                        MatchCollection matchesjinghao = Regex.Matches(temp, pattern4);
+                        //textBox1.Text = matchesjinghao.Count.ToString();
+                        if (matchesjinghao.Count < 1 && startflag < 1)
                         {
-                            temp = doc.Paragraphs[k].Range.Text;
+                            newobject.description = newobject.description + "\n" + temp;
+                        }
+                        else
+                        {
+                            startflag = 1;
+                            int poseuql = temp.IndexOf('=');
+                            tempf = temp.Substring(1, poseuql - 2);
+                            temp = temp.Substring(poseuql + 1, temp.Length - poseuql - 1);
 
-                            int startflag = 0;
-                            MatchCollection matchesjinghao = Regex.Matches(temp, pattern4);
-                            //textBox1.Text = matchesjinghao.Count.ToString();
-                            if (matchesjinghao.Count < 1 && startflag < 1)
+                            if (matchesjinghao.Count >= 1)
                             {
-                                newobject.description = newobject.description + "\n" + temp;
-                            }
-                            else
-                            {
-                                startflag = 1;
-                                int poseuql = temp.IndexOf('=');
-                                tempf = temp.Substring(1, poseuql - 2);
-                                temp = temp.Substring(poseuql + 1, temp.Length - poseuql - 1);
-
-                                if (matchesjinghao.Count >= 1)
+                                if (tempf == "Implement")
                                 {
-                                    if (tempf == "Implement")
-                                    {
-                                        newobject.Implement = temp;
-
-                                    }
-                                    if (tempf == "Priority")
-                                    {
-                                        newobject.Priority = temp;
-                                    }
-                                    if (tempf == "Contribution")
-                                    {
-                                        newobject.Contribution = temp;
-                                    }
-                                    if (tempf == "Category")
-                                    {
-                                        newobject.Category = temp;
-                                    }
-                                    if (tempf == "Allocation")
-                                    {
-                                        newobject.Allocation = temp;
-                                    }
-                                    if (tempf == "Source")
-                                    {
-                                        newobject.sources = temp;
-                                    }
-                                    arraycontentcount++;
+                                    newobject.Implement = temp;
 
                                 }
+                                if (tempf == "Priority")
+                                {
+                                    newobject.Priority = temp;
+                                }
+                                if (tempf == "Contribution")
+                                {
+                                    newobject.Contribution = temp;
+                                }
+                                if (tempf == "Category")
+                                {
+                                    newobject.Category = temp;
+                                }
+                                if (tempf == "Allocation")
+                                {
+                                    newobject.Allocation = temp;
+                                }
+                                if (tempf == "Source")
+                                {
+                                    newobject.sources = temp;
+                                }
+                                arraycontentcount++;
 
                             }
-                            if (newobject.sources != null)
-                            {
-                                break;
-                            }
+
                         }
-                   
+                        if (newobject.sources != null)
+                        {
+                            break;
+                        }
+                    }
+
                     if (newobject.sources != null)
                     {
                         MatchCollection matchessourse = Regex.Matches(newobject.sources, pattern2);
@@ -284,7 +286,7 @@ namespace webinputdoc
             int arraycount = 0;
             string temp = null;
             string tempf = null;
-            int start = pcount  / 8+1;
+            int start = pcount / 8 + 1;
             int end = pcount * 2 / 8;
             /*for (int i = start; i <= end; i++)
             {
@@ -311,14 +313,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     for (int j = i + 1; j <= end; j++)
                     {
@@ -473,14 +476,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     for (int j = i + 1; j <= end; j++)
                     {
@@ -597,14 +601,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     for (int j = i + 1; j <= end; j++)
                     {
@@ -619,7 +624,7 @@ namespace webinputdoc
                     //textBox1.Text = i.ToString();
                     newobject.description = doc3.Paragraphs[i + 1].Range.Text;
                     int arraycontentcount = 1;
-                    for (int k = i + 1; k <=pcount; k++)
+                    for (int k = i + 1; k <= pcount; k++)
                     {
                         temp = doc3.Paragraphs[k].Range.Text;
 
@@ -722,14 +727,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     for (int j = i + 1; j <= end; j++)
                     {
@@ -815,7 +821,7 @@ namespace webinputdoc
                         aaa.finalstrings.Add(newobject);
                     }
                 }
-               
+
             }
             /*string5 = JsonTools.ObjectToJson(mytruearray);
             int strlen = string5.Length;
@@ -848,14 +854,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     for (int j = i + 1; j <= end; j++)
                     {
@@ -941,7 +948,7 @@ namespace webinputdoc
                         aaa.finalstrings.Add(newobject);
                     }
                 }
-              
+
             }
         }
         public void thread7()
@@ -962,14 +969,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     for (int j = i + 1; j <= end; j++)
                     {
@@ -1055,7 +1063,7 @@ namespace webinputdoc
                         aaa.finalstrings.Add(newobject);
                     }
                 }
-               
+
             }
         }
         public void thread8()
@@ -1077,14 +1085,15 @@ namespace webinputdoc
                 if (matches.Count > 0)
                 {
                     hahabaseobject newobject = new hahabaseobject();
-                    newobject.Allocation="";
-                    newobject.Category="";
-                    newobject.Contribution="";
-                    newobject.description="";
-                    newobject.Implement="";
-                    newobject.Priority="";
-                    newobject.othercontext="";
+                    newobject.Allocation = "";
+                    newobject.Category = "";
+                    newobject.Contribution = "";
+                    newobject.description = "";
+                    newobject.Implement = "";
+                    newobject.Priority = "";
+                    newobject.othercontext = "";
                     newobject.title = temp;//还没转换好
+                    newobject.tag = newobject.title;
                     int endj = 0;
                     for (int j = i + 1; j <= end; j++)
                     {
@@ -1167,7 +1176,7 @@ namespace webinputdoc
                         aaa.finalstrings.Add(newobject);
                     }
                 }
-               
+
             }
             /*string8 = JsonTools.ObjectToJson(mytruearray);
             int strlen = string8.Length;
@@ -1250,11 +1259,20 @@ namespace webinputdoc
             catch { return false; }
         }
         [WebMethod(Description = "inputword")]
+        public void InputWord2(string url)
+        {
+            String json = "[{'title':'[TSP-SyAD-0314]','tag':'[TSP-SyAD-0314]','description':'Humidity condition shall obey the related requirement in EN 50125-3 .Relative humidity: ≤90% (no condensation) (25℃).\r\nHumidity condition shall obey the related requirement in EN 50125-3 .Relative humidity: ≤90% (no condensation) (25℃).\r\n湿度条件应遵循环境标准EN 50125-3相关需求，相对湿度：≤90%（无凝结）（25℃）；\r','Source':['[TSP-SyRS-0031]'],'othercontext':'1','Implement':'','Priority':'','Contribution':' Safety\r','Category':' Non-Functional\r','Allocation':' [COTS]\r','sources':' [TSP-SyRS-0031]\r'},{'title':'[TSP-SyAD-0017]','tag':'[TSP-SyAD-0017]','description':'MPS shall provide safety clock. The variation (fast/slow) of safety clock shall be less than or equal to 0.1%. If the variation of the safety clock is larger than this value, MPS shall be guided to safety side.\r\nMPS shall provide safety clock. The variation (fast/slow) of safety clock shall be less than or equal to 0.1%. If the variation of the safety clock is larger than this value, MPS shall be guided to safety side.\r\nMPS应提供安全时钟，安全时钟偏差不大于等于0.1%。如检测安全时钟偏差大于该值，MPS导向安全。\r','Source':['[TSP-SyRS-0113]','[TSP-IHA-0020]'],'othercontext':'2','Implement':'','Priority':'','Contribution':' SIL4\r','Category':' Functional\r','Allocation':' [MPS]\r','sources':' [TSP-SyRS-0113], [TSP-IHA-0020]\r'}]";
+            Context.Response.ContentType = "text/json";
+            Context.Response.Write(json);
+            Context.Response.End();
+        }
+
+        [WebMethod(Description = "inputword")]
         public void InputWord(string url)
         {
             Random rd = new Random();
             int rdd = rd.Next(10, 100);
-            string filename = "rs"+DateTime.Now.ToString("yyyy-MM-dd") + rdd.ToString() + ".doc";
+            string filename = "rs" + DateTime.Now.ToString("yyyy-MM-dd") + rdd.ToString() + ".doc";
             string LocalPath = null;
             //string pdfurl=null;
             try
@@ -1276,7 +1294,8 @@ namespace webinputdoc
                 //filename = "123.doc";
                 //string time1 = DateTime.Now.ToString();
                 //filename = DateTime.Now.ToString() + ".doc";
-                LocalPath = "D:\\files\\" + filename;
+                LocalPath = "C:\\Users\\i333147\\git\\file-server\\data\\" + filename;
+
                 if (!File.Exists(@LocalPath))
                 {
                     //不存在
@@ -1306,11 +1325,11 @@ namespace webinputdoc
             delet_tables(LocalPath);
             FileInfo fi = new FileInfo(LocalPath);
             fi.Attributes = FileAttributes.ReadOnly;
-            
+
 
 
             //然后完成对文档的解析
-            
+
             _Application app = new Microsoft.Office.Interop.Word.Application();
             _Application app1 = new Microsoft.Office.Interop.Word.Application();
             _Application app2 = new Microsoft.Office.Interop.Word.Application();
@@ -1398,23 +1417,23 @@ namespace webinputdoc
             t6.Start();
             t7.Start();
             t8.Start();
-            System.Threading.Tasks.Task.WaitAll(t1,t2,t3,t4,t5,t6,t7,t8);
+            System.Threading.Tasks.Task.WaitAll(t1, t2, t3, t4, t5, t6, t7, t8);
             doc.Close(ref unknow, ref unknow, ref unknow);
-            
+
             doc1.Close(ref unknow, ref unknow, ref unknow);
-           
+
             doc2.Close(ref unknow, ref unknow, ref unknow);
-            
+
             doc3.Close(ref unknow, ref unknow, ref unknow);
-            
+
             doc4.Close(ref unknow, ref unknow, ref unknow);
-            
+
             doc5.Close(ref unknow, ref unknow, ref unknow);
-            
+
             doc6.Close(ref unknow, ref unknow, ref unknow);
-            
+
             doc7.Close(ref unknow, ref unknow, ref unknow);
-            
+
             app.Quit(ref unknow, ref unknow, ref unknow);
             app1.Quit(ref unknow, ref unknow, ref unknow);
             app2.Quit(ref unknow, ref unknow, ref unknow);
@@ -1476,16 +1495,16 @@ namespace webinputdoc
                 fs.Close();
             }
             catch { }
-           //LocalPath = "D:\\files\\testtc.doc";
+            //LocalPath = "D:\\files\\testtc.doc";
             FileInfo fi = new FileInfo(LocalPath);
-           string pdfpath = showwordfiles(LocalPath);
+            string pdfpath = showwordfiles(LocalPath);
             //fi.Attributes = FileAttributes.ReadOnly;
             _Application apptc = new Microsoft.Office.Interop.Word.Application();
             _Document doctc;
             Regex patterntc = new Regex(@"\[\w{3,}-.+?-\d+\]");
             Regex tcpattern1 = new Regex(@"Description");
             Regex tcpattern2 = new Regex(@"Comment");
-            Regex tctp1=new Regex(@"SyRTC");
+            Regex tctp1 = new Regex(@"SyRTC");
             Regex tctp2 = new Regex(@"SyITC");
             Regex tctp3 = new Regex(@"SsyRTC");
             Regex tctp4 = new Regex(@"SsyITC");
@@ -1499,14 +1518,14 @@ namespace webinputdoc
                            ref unknow, ref unknow, ref unknow, ref unknow, ref unknow);//input a doc
             int tablecount = doctc.Tables.Count;
             int rows = 0;
-            string cell11 = doctc.Tables[1].Cell(1,1).Range.Text;
+            string cell11 = doctc.Tables[1].Cell(1, 1).Range.Text;
             object cell111 = doctc.Tables[1];
-            int truecount=0;
+            int truecount = 0;
             int flag = 0;
 
             for (int i = 1; i <= tablecount; i++)
             {
-                cell11 = doctc.Tables[i].Cell(1,1).Range.Text;
+                cell11 = doctc.Tables[i].Cell(1, 1).Range.Text;
                 Match matchMode1 = tcpattern1.Match(cell11);
 
                 if (matchMode1.Success)
@@ -1516,7 +1535,7 @@ namespace webinputdoc
                 }
             }
             tctable[] tctables = new tctable[truecount];
-            
+
             truecount = 0;
             try
             {
@@ -1538,7 +1557,7 @@ namespace webinputdoc
                         Match matchmodetp6 = tctp6.Match(temp1);
                         if (matchmodetp1.Success || matchmodetp2.Success)
                         {
-                            typeflag=1;
+                            typeflag = 1;
                         }
                         else if (matchmodetp3.Success || matchmodetp4.Success)
                         {
@@ -1768,8 +1787,8 @@ namespace webinputdoc
                             newtctable.test_item = "";
                             newtctable.result = "";
                             newtctable.comment = "";
-                            
-                            newtctable.input=doctc.Tables[i].Cell(3, 2).Range.Text;
+
+                            newtctable.input = doctc.Tables[i].Cell(3, 2).Range.Text;
                             newtctable.exp_step = doctc.Tables[i].Cell(5, 2).Range.Text;
                             newtctable.exec_step = doctc.Tables[i].Cell(4, 2).Range.Text;
                             step123 newstep = new step123();
@@ -1809,7 +1828,7 @@ namespace webinputdoc
                             tctables[truecount] = newtctable;
                             truecount++;
                         }
-                        
+
                     }
 
                 }
@@ -1823,10 +1842,10 @@ namespace webinputdoc
             Context.Response.End();
         }
 
-        [WebMethod (Description="test")]
-         public string test(string url)
+        [WebMethod(Description = "test")]
+        public string test(string url)
         {
-            int pcount=url.Length;
+            int pcount = url.Length;
             int pa;
             string aaa = url;
             //pa=pcount*2/9;
@@ -1834,10 +1853,10 @@ namespace webinputdoc
             string snap = "/";
             //filename = url;
             pa = url.LastIndexOf('/');
-            filename = aaa.Substring(pa + 1, pcount-pa-1);
+            filename = aaa.Substring(pa + 1, pcount - pa - 1);
             pa = pa + 1;
-                string aaaa="d://111.doc";
-           snap= showwordfiles(aaaa);
+            string aaaa = "d://111.doc";
+            snap = showwordfiles(aaaa);
             return null;
         }
 

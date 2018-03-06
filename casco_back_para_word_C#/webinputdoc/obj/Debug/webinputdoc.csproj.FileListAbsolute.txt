@@ -77,10 +77,9 @@ D:\casco相关文件\casco-0524final\casco0426\webinputdoc\bin\webinputdoc.pdb
 D:\casco相关文件\casco-0524final\casco0426\webinputdoc\obj\Debug\ResolveAssemblyReference.cache
 D:\casco相关文件\casco-0524final\casco0426\webinputdoc\obj\Debug\webinputdoc.dll
 D:\casco相关文件\casco-0524final\casco0426\webinputdoc\obj\Debug\webinputdoc.pdb
-C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.dll
-C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.pdb
 C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\bin\webinputdoc.dll.config
 C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\bin\webinputdoc.dll
 C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\bin\webinputdoc.pdb
 C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.csproj.ResolveComReference.cache
-C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.csprojResolveAssemblyReference.cache
+C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.dll
+C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.pdb
