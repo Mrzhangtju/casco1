@@ -1294,8 +1294,8 @@ namespace webinputdoc
                 //filename = "123.doc";
                 //string time1 = DateTime.Now.ToString();
                 //filename = DateTime.Now.ToString() + ".doc";
-                LocalPath = "C:\\Users\\i333147\\git\\file-server\\data\\" + filename;
-
+                LocalPath = ConfigurationManager.AppSettings["path"].ToString() + filename;
+             
                 if (!File.Exists(@LocalPath))
                 {
                     //不存在
