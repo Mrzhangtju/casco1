@@ -83,4 +83,5 @@ C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\bin
 C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.csproj.ResolveComReference.cache
 C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.dll
 C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.pdb
-C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.csprojResolveAssemblyReference.cache
+C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.csproj.CoreCompileInputs.cache
+C:\Users\i333147\git\cascoWordProcessing\casco_back_para_word_C#\webinputdoc\obj\Debug\webinputdoc.csprojAssemblyReference.cache
